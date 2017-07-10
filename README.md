@@ -1,1 +1,0 @@
-# SingleServ_static
