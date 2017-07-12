@@ -39,7 +39,7 @@
     <header class="header">
       <a class="current_page" href="#">Features</a>
       <a href="#">Past Features</a>
-      <a class="search" href="#"><img src="images/search.svg" alt=""></a>
+      <a class="search search-btn" href="#"><img src="images/search.svg" alt=""></a>
     </header>
     <div class="sidebar">
       <div class="home_logo">
@@ -83,14 +83,29 @@
             </div>
           </div>
           <div class="music_player_wrapper">
-            <h3>some content</h3>
+            <div class="play_bar_wrapper">
+              <div class="play_btn">
+                <img src="images/play-triangle-wht.png" alt="">
+              </div>
+            </div>
+            <div class="cta_wrapper">
+              <button>DONATE</button>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Search Modal -->
-
+    <div class="search-box search-elem">
+      <button class="close"><img src="images/close.png" alt=""></button>
+      <div class="inner row">
+        <div class="small-12 columns">
+          <label class="placeholder" for="search-field">Search</label>
+          <input type="text" id="search-field">
+        </div>
+      </div>
+     </div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
