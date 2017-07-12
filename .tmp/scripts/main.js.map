@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":["console","log"],"mappings":"AAAAA,QAAQC,GAAR,CAAY,gBAAZ","file":"main.js","sourcesContent":["console.log('\\'Allo \\'Allo!');\n"]}
+{"version":3,"sources":["main.js"],"names":["$","document","ready","console","log"],"mappings":"AAAAA,EAAEC,QAAF,EAAYC,KAAZ,CAAkB,YAAW;AACzBC,YAAQC,GAAR,CAAY,gBAAZ;AACH,CAFD","file":"main.js","sourcesContent":["$(document).ready(function() {\n    console.log('\\'Allo \\'Allo!');\n})\n"]}

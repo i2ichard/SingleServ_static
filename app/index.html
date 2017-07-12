@@ -21,6 +21,14 @@
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
+    <script type="text/javascript">WebFont.load({
+      google: {
+        families: ["Open Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic","Roboto:regular","Open Sans Condensed:300,700"]
+      }
+    });
+  </script>
   </head>
   <body>
     <!--[if lt IE 10]>
@@ -29,8 +37,9 @@
 
     <!-- Fixed Header and Left side bar -->
     <header class="header">
-      <a href="#">Features</a>
+      <a class="current_page" href="#">Features</a>
       <a href="#">Past Features</a>
+      <a class="search" href="#"><img src="images/search.svg" alt=""></a>
     </header>
     <div class="sidebar">
       <div class="home_logo">
@@ -52,21 +61,35 @@
 
 
     <!-- Main body content -->
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
+    <div class="container-fluid main_content">
+
+      <div class="artist_wrapper">
+        <div class="artist_img_wrapper">
           <img src="images/artist.jpg" alt="">
         </div>
-        <div class="col-md-6">
-          <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Proin eget tortor risus. Nulla quis lorem ut libero malesuada feugiat.
-          <br><br>
-          Nulla quis lorem ut libero malesuada feugiat. Proin eget tortor risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Nulla porttitor accumsan tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Pellentesque in ipsum id orci porta dapibus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Proin eget tortor risus.</p>
+        <div class="artist_desc_wrapper">
+          <h1 class="page_title">Features</h1>
+          <div class="artist_name_wrapper">
+            <div class="top_half">
+              <img src="images/logo-top-half.svg" alt="">
+              <h3>TOKiMONSTA</h3>
+            </div>
+            <div class="bottom_half">
+              <img src="images/logo-bottom-half.svg" alt="">
+              <h3>Rainforest Alliance</h3>
+            </div>
+            <div class="short_desc">
+              <p>Nature has always had a huge influence on my art. I really try to translate the feeling I get from being outside as best as I sonically can through my music. In addition to being inspired by nature itself, I’m extremely passionate about environmental issues. I wanted to align the release of “Gamble” with an organization that puts just as much focus on forest sustainability as it does the communities who help them thrive. - Jennifer Lee, TOKiMONSTA</p>
+            </div>
+          </div>
+          <div class="music_player_wrapper">
+            <h3>some content</h3>
+          </div>
         </div>
       </div>
-
-
-
     </div>
+
+    <!-- Search Modal -->
 
 
     <!-- build:js scripts/vendor.js -->

@@ -14,7 +14,7 @@ $icon-font-path: '../fonts/';
 /* Space out content a bit */
 body {
   padding-top: 0px;
-  padding-bottom: 20px;
+  font-family: roboto, sans-serif;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -107,10 +107,22 @@ header {
     color: #000;
     font-size: 22px;
     text-decoration: none;
+    font-weight: Roboto, sans-serif;
+    font-size: 16px;
+
+    &.search img {
+      width: 25px;
+      height: 25px;
+      float: right;
+    }
 
     &:hover, &:visited, &:active {
       text-decoration: none;
       color: #000;
+    }
+
+    &.current_page {
+      color: rgb(128, 0, 255);
     }
   }
 }
@@ -146,6 +158,7 @@ div.sidebar {
     justify-content: flex-end;
     height: 100vh;
     padding-bottom: 30px;
+    align-items: center;
 
     a {
       padding-top: 20px;
@@ -156,9 +169,8 @@ div.sidebar {
         text-align: center;
         line-height: 40px;
         vertical-align: middle;
-        font-size: 20px;
+        font-size: 16px;
         padding-top: 0px;
-        padding-bottom: 20px;
 
         &:hover {
           text-decoration: none;
@@ -173,8 +185,78 @@ div.sidebar {
   }
 }
 
+.main_content {
+  height: 100vh;
+  padding: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-img {
-  width: 500px;
-  height: auto;
+  .artist_wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .artist_img_wrapper {
+      position: relative;
+      display: inline-block;
+      width: 45%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .artist_desc_wrapper {
+      position: relative;
+      display: inline-block;
+      width: 45%;
+      background-color: hsla(30, 10%, 72%, 0.67);
+      left: 0px;
+      margin: -20px 0px;
+      padding: 20px 32px;
+
+      .page_title {
+        position: absolute;
+        z-index: 999;
+        right: 0%;
+        top: -7%;
+        color: rgb(128, 0, 255);
+        font-family: quicksand;
+        font-weight: 400;
+      }
+
+      .artist_name_wrapper {
+        padding: 40px 0px;
+        color: rgb(51, 51, 51);
+
+        img {
+          width: 40px;
+          float: left;
+        }
+
+        h3 {
+          font-family: quicksand;
+          font-weight: 400;
+          font-size: 36px;
+          line-height: 39px;
+          margin-left: 55px;
+        }
+
+        p {
+          font-size: 16px;
+          margin-top: 10px;
+        }
+      }
+
+      .music_player_wrapper {
+        width: 100%;
+        height: 120px;
+        color: #fff;
+        background-color: rgb(128, 0, 255);
+        position: absolute;
+        bottom: 5%;
+      }
+    }
+  }
 }
