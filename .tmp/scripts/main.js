@@ -54,7 +54,7 @@ $(document).ready(function () {
   });
 
   $('.cta_wrapper').on('click', function (t) {
-    console.log("clicked");
+    console.log('clicked');
     $(this).donateBox('open');
     t.preventDefault();
   });
