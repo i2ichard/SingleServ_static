@@ -1,5 +1,12 @@
 $icon-font-path: '../fonts/';
 
+$red:#D62839;
+$blue:#0000FF;
+$purple:#8000ff;
+$gray:#999;
+$green:#00A896;
+$font-family-sans:'Roboto', 'Helvetica Neue', sans-serif;
+
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
@@ -15,6 +22,12 @@ $icon-font-path: '../fonts/';
 body {
   padding-top: 0px;
   font-family: roboto, sans-serif;
+
+  *{
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -196,6 +209,9 @@ div.sidebar {
     display: flex;
     justify-content: center;
     position: relative;
+    margin-top: 75px;
+    margin-bottom: 75px;
+
 
     .artist_img_wrapper {
       position: relative;
@@ -259,9 +275,12 @@ div.sidebar {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-left: 20px;
 
         .play_bar_wrapper {
           width: 70%;
+          display: flex;
+          align-items: center;
 
           .play_btn {
             height: 50px;
@@ -272,10 +291,30 @@ div.sidebar {
             justify-content: center;
             align-items: center;
           }
+
+          .progress_bar {
+            border-bottom: 3px solid #fff;
+            width: 70%;
+
+            p {
+              margin: -20px 0px 0px;
+              width: 100%;
+            }
+          }
         }
 
         .cta_wrapper {
           width: 30%;
+
+          button {
+            padding: 10px 30px;
+            background: transparent;
+            border: 3px solid #fff;
+
+            &:hover {
+
+            }
+          }
         }
       }
     }
@@ -283,13 +322,7 @@ div.sidebar {
 }
 
 
-// Search Modal
-$red:#D62839;
-$purple:#32213A;
-$gray:#999;
-$green:#00A896;
-$font-family-sans:'Roboto', 'Helvetica Neue', sans-serif;
-
+// Search Modal / Donate Modal
 @mixin scaledown {
   -webkit-transform: scale(0);
 	    -ms-transform: scale(0);
@@ -323,7 +356,8 @@ body.search-open {
   outline: none;
 }
 
-.search-box.search-elem {
+.search-box.search-elem,
+.search-box.donate-elem {
 	margin: 0;
 	position: fixed;
 	top: 0;
@@ -406,9 +440,90 @@ body.search-open {
 	}
 }
 
-.search-box.search-elem.search-open {
+.search-box.search-elem.search-open,
+.search-box.donate-elem.search-open {
 	@include scaleup;
 }
+
+.search-box.donate-elem.search-open {
+  .donate_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .box {
+      background-color: #fff;
+      width: 50%;
+      padding: 70px 70px;
+
+      .artist_name_wrapper {
+        padding-bottom: 30px;
+        div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          h3 {
+            padding-left: 15px;
+            font-family: quicksand;
+            font-weight: 400;
+            font-size: 36px;
+          }
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+
+      .bonus_section {
+        width: 100%;
+
+        p {
+          color: $blue;
+        }
+        select {
+          width: 100%;
+          height: 50px;
+          border-radius: 0;
+          border: 2px solid $blue;
+          -webkit-appearance: none;
+          padding: 3px 10px;
+          margin-bottom: 40px;
+        }
+
+        .bottom_row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          position: relative;
+
+          input {
+            border-bottom: 2px solid $blue;
+            width: 60%;
+          }
+
+          .add_to_cart_wrapper {
+            background: $purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 20px;
+
+            button {
+              background: transparent;
+              padding: 10px 20px;
+              border: 2px solid #fff;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
 
 .search-btn {
 	text-transform: uppercase;
@@ -420,4 +535,8 @@ body.search-open {
 	&:hover {
 		color: #00A896;
 	}
+}
+
+.donate_wrapper {
+  display: none;
 }

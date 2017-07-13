@@ -37,9 +37,13 @@
 
     <!-- Fixed Header and Left side bar -->
     <header class="header">
-      <a class="current_page" href="#">Features</a>
-      <a href="#">Past Features</a>
-      <a class="search search-btn" href="#"><img src="images/search.svg" alt=""></a>
+      <div class="left">
+        <a class="current_page" href="#">Features</a>
+        <a href="#">Past Features</a>
+      </div>
+      <div class="right">
+        <a class="search search-button" href="#"><img src="images/search.svg" alt=""></a>
+      </div>
     </header>
     <div class="sidebar">
       <div class="home_logo">
@@ -87,6 +91,9 @@
               <div class="play_btn">
                 <img src="images/play-triangle-wht.png" alt="">
               </div>
+              <div class="progress_bar">
+                <p class="song_name">&nbsp;TOKiMONSTA - Gamble</p>
+              </div>
             </div>
             <div class="cta_wrapper">
               <button>DONATE</button>
@@ -95,6 +102,41 @@
         </div>
       </div>
     </div>
+
+    <!-- Donate Modal -->
+    <div class="search-box donate-elem">
+      <button class="close"><img src="images/close.png" alt=""></button>
+      <div class="donate_wrapper">
+        <div class="box">
+          <div class="artist_name_wrapper">
+            <div class="top_half">
+              <img src="images/logo-top-half.svg" alt="">
+              <h3>TOKiMONSTA</h3>
+            </div>
+            <div class="bottom_half">
+              <img src="images/logo-bottom-half.svg" alt="">
+              <h3>Rainforest Alliance</h3>
+            </div>
+          </div>
+          <div class="bonus_section">
+            <p>BONUS LEVEL</p>
+            <select name="bonusLevels" id="bonusLevels" placeholder="SELECT LEVEL">
+              <option value="First">LEVEL 1 - Gamble - $2</option>
+              <option value="Second">LEVEL 2 - Instagram Story Shoutout - $10+</option>
+              <option value="Third">LEVEL 3 - TOKiMONSTA X DIMEPI... - $25+</option>
+            </select>
+            <p>DONATION AMOUNT</p>
+            <div class="bottom_row">
+              <input type="text" placeholder="$">
+              <div class="add_to_cart_wrapper">
+                <button>ADD TO CART</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+     <!-- Search Donate End -->
 
     <!-- Search Modal -->
     <div class="search-box search-elem">
@@ -106,6 +148,7 @@
         </div>
       </div>
      </div>
+     <!-- Search Modal End -->
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
