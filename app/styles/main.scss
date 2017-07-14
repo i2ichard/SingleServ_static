@@ -158,6 +158,13 @@ div.sidebar {
   .sub_logo {
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    .cart_icon {
+      &:hover .cart_hover_wrapper{
+        display: block;
+      }
+    }
 
     a img {
       width: 40px;
@@ -193,6 +200,50 @@ div.sidebar {
       img {
         width: 30px;
         height: auto;
+      }
+    }
+  }
+}
+
+.cart_hover_wrapper {
+  position: absolute;
+  background-color: #E6E7E8;
+  width: 400px;
+  top: 159px;
+  left: 80px;
+  display: block;
+
+    .show {
+      display: block;
+    }
+
+  ul {
+    list-style-type: none;
+    padding: 30px;
+
+    li {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #fff;
+      margin-bottom: 10px;
+
+      div {
+        padding: 10px;
+        p {
+          margin-bottom: 0;
+          &.bold {
+            font-weight: 700;
+          }
+        }
+      }
+      img {
+        width: 16px;
+        height: 16px;
+      }
+
+      .price {
+        margin-bottom: 0;
       }
     }
   }

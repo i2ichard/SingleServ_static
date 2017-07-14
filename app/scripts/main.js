@@ -68,31 +68,14 @@ $(document).ready(function() {
     $(this).donateBox('close');
     });
 
-    // Donate
-
-    // (function ($) {
-    // $.fn.donateBox = function(ev) {
-    //
-    // var $donateEl = $('.donate-elem');
-    //
-    // if ( ev === 'open') {
-    //   $searchEl.addClass('search-open')
-    // };
-    //
-    // if ( ev === 'close') {
-    //   $searchEl.removeClass('search-open')
-    // };
-    //
-    // }(jQuery));
-    //
-    // $('.cta_wrapper').on('click', function(e){
-    //   console.log("clicked");
-    // $(this).donateBox('open');
-    // e.preventDefault();
-    // });
-    //
-    // $('.close').on('click', function(){
-    // $(this).donateBox('close');
-    // });
+    // on hover show cart preview
+    $(".cart_icon").hover(
+      function () {    /* on hover over*/
+        $(".cart_hover_wrapper").addClass("show");
+      },
+      function () {    /* on hover out*/
+        $(".cart_hover_wrapper").removeClass("show");
+      }
+    )
 
 });

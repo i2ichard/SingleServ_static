@@ -160,10 +160,15 @@ div.sidebar {
   .sub_logo {
     display: flex;
     flex-direction: column;
+    position: relative;
 
     a img {
       width: 40px;
       margin: 20px 0px 0px;
+    }
+
+    .cart_hover_wrapper {
+      position: absolute;
     }
   }
 
