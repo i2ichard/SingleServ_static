@@ -115,6 +115,13 @@ header {
   display: flex;
   align-items: center;
 
+  .header_links {
+    width: calc(100% - 75px);
+    display: flex;
+    justify-content: space-between;
+    padding-right: 35px;
+  }
+
   a {
     padding-left: 75px;
     color: #000;
@@ -164,6 +171,25 @@ div.sidebar {
       &:hover .cart_hover_wrapper{
         display: block;
       }
+      &:after {
+        width: 15px;
+        height: 15px;
+        background-color: #fff;
+        content: "3";
+        font-size: 10px;
+        color: $purple;
+        border: 2px solid $purple;
+        display: block;
+        position: absolute;
+        padding-left: 1px;
+        padding-top: 1px;
+        top: 83%;
+        right: -7px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
     }
 
     a img {
@@ -212,14 +238,24 @@ div.sidebar {
   top: 159px;
   left: 80px;
   display: block;
+  opacity: 0;
+  transition: opacity 100ms linear;
+  padding: 30px;
 
-    .show {
-      display: block;
+    &.show_on_hover {
+      opacity: 1;
+    }
+
+    .bridge {
+      position: relative;
+      height: 40px;
+      width: 80px;
+      left: -80px;
     }
 
   ul {
     list-style-type: none;
-    padding: 30px;
+    padding-left: 0px;
 
     li {
       display: flex;
@@ -247,6 +283,31 @@ div.sidebar {
       }
     }
   }
+  .subtotal {
+    color: $blue;
+    margin-top: 20px;
+    text-align: right;
+  }
+
+  .hover_cart_cta {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    width: 100%;
+
+    div {
+      button {
+        width: 150px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 4px solid $blue;
+        background: transparent;
+        color: $blue;
+        font-weight: 700;
+      }
+
+    }
+  }
 }
 
 .main_content {
@@ -262,7 +323,8 @@ div.sidebar {
     position: relative;
     margin-top: 75px;
     margin-bottom: 75px;
-
+    width: 85%;
+    min-width: 969px;
 
     .artist_img_wrapper {
       position: relative;
@@ -286,11 +348,12 @@ div.sidebar {
       .page_title {
         position: absolute;
         z-index: 98;
-        right: 0%;
-        top: -7%;
+        right: -3%;
+        top: -9%;
         color: rgb(128, 0, 255);
         font-family: quicksand;
         font-weight: 400;
+        font-size: 52px;
       }
 
       .artist_name_wrapper {
@@ -327,6 +390,7 @@ div.sidebar {
         align-items: center;
         justify-content: center;
         padding-left: 20px;
+        padding-right: 20px;
 
         .play_bar_wrapper {
           width: 70%;

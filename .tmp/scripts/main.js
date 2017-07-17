@@ -66,10 +66,28 @@ $(document).ready(function () {
   // on hover show cart preview
   $(".cart_icon").hover(function () {
     /* on hover over*/
-    $(".cart_hover_wrapper").addClass("show");
-  }, function () {
-    /* on hover out*/
-    $(".cart_hover_wrapper").removeClass("show");
+    $(".cart_hover_wrapper").addClass("show_on_hover");
+
+    var cartIsHovered = $('.cart_hover_wrapper').is(':hover');
+    var iconIsHovered = $('.cart_icon').is(':hover');
+
+    setTimeout(function () {
+      if (cartIsHovered == true) {
+        console.log("no more hover here " + iconIsHovered);
+      }
+    }, 2000);
   });
+
+  // function () {    /* on hover out*/
+  //   var cartIsHovered = $('.cart_hover_wrapper').is(':hover');
+  //   var iconIsHovered = $('.cart_icon').is(':hover');
+  //
+  //   if (!cartIsHovered && !iconIsHovered) {
+  //     setTimeout(function() {
+  //       $(".cart_hover_wrapper").removeClass("show_on_hover")
+  //     }, 2000);
+  //   }
+  // }
+
 });
 //# sourceMappingURL=main.js.map
