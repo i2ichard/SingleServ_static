@@ -1,0 +1,14 @@
+$icon-font-path: '../fonts/';
+
+$red:#D62839;
+$blue:#0000FF;
+$purple:#8000ff;
+$gray:#999;
+$green:#00A896;
+$toupe: rgba(191, 184, 176, 1);
+$font-family-sans:'Roboto', 'Helvetica Neue', sans-serif;
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "main.scss";
+// endbower

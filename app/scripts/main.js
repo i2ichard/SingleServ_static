@@ -69,16 +69,16 @@ $(document).ready(function() {
     });
 
     // on hover show cart preview
-    $(".cart_icon").hover(
+    $('.cart_icon').hover(
       function () {    /* on hover over*/
-        $(".cart_hover_wrapper").addClass("show_on_hover");
+        $('.cart_hover_wrapper').addClass('show_on_hover');
 
         var cartIsHovered = $('.cart_hover_wrapper').is(':hover');
         var iconIsHovered = $('.cart_icon').is(':hover');
 
         setTimeout(function () {
           if (cartIsHovered == true) {
-            console.log("no more hover here " + iconIsHovered);
+            console.log('no more hover here ' + iconIsHovered);
           }
         }, 2000)
       });
