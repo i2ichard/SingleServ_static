@@ -1,0 +1,409 @@
+$icon-font-path: '../fonts/';
+
+$red:#D62839;
+$blue:#0000FF;
+$purple:#8000ff;
+$gray:#999;
+$green:#00A896;
+$font-family-sans:'Roboto', 'Helvetica Neue', sans-serif;
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+@import "main.scss";
+// endbower
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    // max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 0px;
+  }
+
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+
+.main_content {
+  /*position: relative;*/
+  .cta_wrapper {
+    width: 30%;
+
+    button {
+      padding: 10px 30px;
+      background: transparent;
+      border: 3px solid #0000FF;
+      font: roboto;
+      font-size: 16px;
+      font-weight: bold;
+      color: #0000FF;
+
+      &:hover {
+
+      }
+    }
+  }
+
+  .checkout-row {
+    display: flex;
+  }
+
+  input[type = text] {
+    color: blue;
+    background-color: rgba(1,2,3,0);
+    box-shadow: none;
+    border-style: solid;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 16px;
+    font-family: roboto;
+    font-weight: bold;
+  }
+
+  input[type = text]::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: blue;
+  }
+  input[type = text]::-moz-placeholder { /* Firefox 19+ */
+    color: blue;
+  }
+  input[type = text]:-ms-input-placeholder { /* IE 10+ */
+    color: blue;
+  }
+  input[type = text]:-moz-placeholder { /* Firefox 18- */
+    color: blue;
+  }
+
+  .cart-contents {
+    /*position: absolute;
+    top: 0px;
+    left: 0px;*/
+    width: 100%;
+    height: 100%;
+    background-color: #E6E7E8;
+    position: relative;
+    padding-top: 35px;
+
+    .test {
+      position: absolute;
+      top: -30px;
+      right: -48px;
+      font-family: quicksand;
+      font-size: 52px;
+      color: #8000FF;
+      line-height: 52px;
+      z-index: 120;
+    }
+
+    .cart-header {
+      width: 90%;
+      margin: auto;
+      padding-right: 26px;
+      padding-left: 26px;
+      display: flex;
+      justify-content: flex-end;
+      font-family: open-sans;
+      font-size: 16px;
+      color: #0000FF;
+
+      div:first-child {
+        flex-grow: 4;
+      }
+
+      div:not(:first-child) {
+        flex-grow: 1;
+      }
+
+      div:last-child {
+        text-align: right;
+      }
+
+    }
+
+    .donation {
+      background-color: #FFFFFF;
+      margin-bottom: 12px;
+      width: 90%;
+      margin: auto;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 26px;
+      padding-left: 26px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      .remove-donation {
+        color: blue;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+      }
+
+      .donation-name {
+        font-family: quicksand;
+        font-size: 24px
+      }
+
+      .donation-level {
+        font-family: roboto;
+        font-size: 16px;
+      }
+
+      .donation-amount {
+        font-family: roboto;
+        font-size: 32px;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      .donation-amount:after {
+        content: '';
+        position: absolute;
+        bottom: 5px;
+        right: -5px;
+        height: 3px;
+        width: 130%;
+        background-color: #0000FF;
+      }
+
+    }
+
+  }
+}
+
+
+// Search Modal / Donate Modal
+@mixin scaledown {
+  -webkit-transform: scale(0);
+	    -ms-transform: scale(0);
+	        transform: scale(0);
+}
+
+@mixin scaleup {
+  -webkit-transform: scale(1);
+	    -ms-transform: scale(1);
+	        transform: scale(1);
+}
+
+body.search-open {
+	overflow: hidden;
+}
+
+.close {
+	position: absolute;
+	top: 2rem;
+	right: 2rem;
+	background: none;
+	border: 0;
+	font-size: 1rem;
+	font-weight: 700;
+	display: block;
+	cursor: pointer;
+	color: black;
+  padding: 1rem 1.25rem;
+	background: white;
+	border-radius: 50%;
+  outline: none;
+}
+
+.search-box.search-elem,
+.search-box.donate-elem {
+	margin: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background: rgba(0, 0, 0, 0.9);
+	transition: all .3s  ease-in-out;
+	@include scaledown;
+
+	.inner {
+		width: 70%;
+		margin: 0 auto;
+		position: relative;
+		top: 20%;
+		transform: translateY(-20%);
+	}
+
+	label {
+		color: white;
+		font-weight: 300;
+		font-family: $font-family-sans;
+	}
+
+	button.submit {
+		outline: none;
+	  position: absolute;
+	  top: 0;
+	  right: 15px;
+	  height: 70px;
+    padding: 10px 2rem;
+	  background: $green;
+	  font-family: $font-family-sans;
+	  font-size: 1rem;
+	  color: white;
+
+	    &[disabled] {
+	    	background: #ccc;
+	    	color: $purple;
+	    }
+	}
+
+	input[type="text"] {
+		padding: 20px;
+		height: 72px;
+    width: 100%;
+		font-size: 32px;
+		font-family: $font-family-sans;
+		font-weight: 300;
+    color: #fff;
+		border: none;
+		border-bottom: solid 2px #fff;
+		transition: border 0.3s;
+		border-radius: 0;
+    background: transparent;
+
+		&:focus {
+      box-shadow: none;
+      outline: none;
+		}
+	}
+
+	label.placeholder {
+		position: absolute;
+		top: 10px;
+		left: 2rem;
+		font-size: 32px;
+		font-weight: 300;
+		font-family: roboto;
+		color: #fff;
+		transition: all .3s;
+
+		&.move-up {
+			top: -50px;
+			color: rgb(128, 0, 255);
+			font-size: 52px;
+      font-family: quicksand;
+		}
+	}
+}
+
+.search-box.search-elem.search-open,
+.search-box.donate-elem.search-open {
+	@include scaleup;
+}
+
+.search-box.donate-elem.search-open {
+  .donate_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .box {
+      background-color: #fff;
+      width: 50%;
+      padding: 70px 70px;
+
+      .artist_name_wrapper {
+        padding-bottom: 30px;
+        div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          h3 {
+            padding-left: 15px;
+            font-family: quicksand;
+            font-weight: 400;
+            font-size: 36px;
+          }
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
+
+      .bonus_section {
+        width: 100%;
+
+        p {
+          color: $blue;
+        }
+        select {
+          width: 100%;
+          height: 50px;
+          border-radius: 0;
+          border: 2px solid $blue;
+          -webkit-appearance: none;
+          padding: 3px 10px;
+          margin-bottom: 40px;
+        }
+
+        .bottom_row {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          position: relative;
+
+          input {
+            border-bottom: 2px solid $blue;
+            width: 60%;
+          }
+
+          .add_to_cart_wrapper {
+            background: $purple;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0px 20px;
+
+            button {
+              background: transparent;
+              padding: 10px 20px;
+              border: 2px solid #fff;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.search-btn {
+	text-transform: uppercase;
+	font-family: $font-family-sans;
+	font-size: 0.875rem;
+	padding: 0 10px;
+  display: inline-block;
+
+	&:hover {
+		color: #00A896;
+	}
+}
+
+.donate_wrapper {
+  display: none;
+}

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>SingleServ</title>
+    <title>SingleServ: Past Features</title>
 
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
@@ -14,8 +14,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <!-- build:css styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <!-- build:css styles/cart.css -->
+    <link rel="stylesheet" href="styles/cart.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -37,12 +37,14 @@
 
     <!-- Fixed Header and Left side bar -->
     <header class="header">
-      <div class="left">
-        <a class="current_page" href="#">Features</a>
-        <a href="#">Past Features</a>
-      </div>
-      <div class="right">
-        <a class="search search-button" href="#"><img src="images/search.svg" alt=""></a>
+      <div class="header_links">
+        <div class="left">
+          <a href="#">Features</a>
+          <a class="current_page" href="#">Past Features</a>
+        </div>
+        <div class="right">
+          <a class="search search-button" href="#"><img src="images/search.svg" alt=""></a>
+        </div>
       </div>
     </header>
     <div class="sidebar">
@@ -51,7 +53,7 @@
       </div>
       <div class="sub_logo">
         <a href="#"><img src="images/account-icon.png" alt=""></a>
-        <a href="#"><img src="images/cart-icon.png" alt=""></a>
+        <a class="cart_icon" href="cart.html"><img src="images/cart-icon.png" alt=""></a>
       </div>
       <div class="lower_icons">
         <a href="#" class="about_link">About</a>
@@ -66,8 +68,59 @@
 
     <!-- Main body content -->
     <div class="container-fluid main_content">
+      <div class="cart-contents">
+        <div class="test"> CART</div>
 
+        <div class="cart-header">
+          <div></div>
+          <div> BONUS LEVEL</div>
+          <div> DONATION AMOUT</div>
 
+        </div>
+        <div class="donation">
+          <div class="remove-donation">X</div>
+          <div class="donation-name">
+            <div class="artist-name">
+              TOKiMONSTA
+            </div>
+            <div class="charity">
+              Rainforest Alliance
+            </div>
+          </div>
+          <div class="donation-level">
+            LEVEL 2 - Instagram Story Shoutout
+          </div>
+          <div class="donation-amount">
+            $100.00
+          </div>
+        </div>
+
+        <div class="donation">
+          <div class="remove-donation">X</div>
+          <div class="donation-name">
+            <div class="artist-name">
+              TOKiMONSTA
+            </div>
+            <div class="charity">
+              Rainforest Alliance
+            </div>
+          </div>
+          <div class="donation-level">
+            LEVEL 2 - Instagram Story Shoutout
+          </div>
+          <div class="donation-amount">
+            $100.00
+          </div>
+        </div>
+
+        <div class="checkout-row">
+            <input type="text" placeholder="Enter Coupon Code">
+          <div class="cta_wrapper">
+                <button>APPLY COUPON</button>
+                <button>UPDATE CART</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Donate Modal -->
@@ -104,6 +157,45 @@
       </div>
      </div>
      <!-- Search Donate End -->
+
+     <div class="cart_hover_wrapper">
+       <!-- <div class="bridge"></div> -->
+       <ul>
+         <li>
+           <img src="images/purple-x@2x.png" alt="">
+           <div>
+             <p class="bold">TOKiMONSTA / Rainforest Alliance</p>
+             <p>LEVEL 2 - Instagram Story Shouto...</p>
+           </div>
+           <p class="price">$13</p>
+         </li>
+         <li>
+           <img src="images/purple-x@2x.png" alt="">
+           <div>
+             <p class="bold">TOKiMONSTA / Rainforest Alliance</p>
+             <p>LEVEL 2 - Instagram Story Shouto...</p>
+           </div>
+           <p class="price">$13</p>
+         </li>
+         <li>
+           <img src="images/purple-x@2x.png" alt="">
+           <div>
+             <p class="bold">TOKiMONSTA / Rainforest Alliance</p>
+             <p>LEVEL 2 - Instagram Story Shouto...</p>
+           </div>
+           <p class="price">$13</p>
+         </li>
+       </ul>
+       <div class="subtotal">Subtotal $39</div>
+       <div class="hover_cart_cta">
+         <div class="view_cart">
+           <button>VIEW CART</button>
+         </div>
+         <div class="view_cart">
+           <button>CHECK OUT</button>
+         </div>
+       </div>
+     </div>
 
     <!-- Search Modal -->
     <div class="search-box search-elem">
