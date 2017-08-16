@@ -10,7 +10,8 @@
       "main": [
         "assets/stylesheets/_bootstrap.scss",
         "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
+        "assets/javascripts/bootstrap.js",
+        "app/styles/main.scss"
       ]
     }
   },

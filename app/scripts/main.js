@@ -83,6 +83,10 @@ $(document).ready(function() {
         }, 2000)
       });
 
+      // $('.artist_block').hover(function() {
+      //   $(this).next('.artist_name > .date').css("opacity", "1");
+      // })
+
     // function () {    /* on hover out*/
     //   var cartIsHovered = $('.cart_hover_wrapper').is(':hover');
     //   var iconIsHovered = $('.cart_icon').is(':hover');

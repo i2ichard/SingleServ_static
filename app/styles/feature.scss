@@ -10,8 +10,9 @@ $font-family-sans:'Roboto', 'Helvetica Neue', sans-serif;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "main.scss";
 // endbower
+
+@import "main.scss";
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -24,7 +25,18 @@ $font-family-sans:'Roboto', 'Helvetica Neue', sans-serif;
 body {
   padding-top: 0px;
   font-family: roboto, sans-serif;
-  background-color: $toupe;
+
+  &.mint {
+    background-color: $mint;
+  }
+
+  &.cream {
+    background-color: $cream;
+  }
+
+  &.toupe {
+    background-color: $toupe;
+  }
 
   *{
     &:focus {
@@ -109,7 +121,7 @@ body {
 }
 
 header {
-  background-color: $toupe;
+  background-color: transparent;
   height: 75px;
   width: 100vw;
   position: fixed;
@@ -146,7 +158,7 @@ header {
 div.sidebar {
   width: 75px;
   height: 100vh;
-  background: $toupe;
+  background: transparent;
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -236,10 +248,10 @@ div.sidebar {
     .artist_desc_wrapper {
       position: relative;
       display: inline-block;
-      width: 45%;
+      width: 50%;
       left: 0px;
       margin: 0px 0px;
-      padding: 20px 32px;
+      padding: 20px 0px 20px 32px;
 
       .page_title {
         position: absolute;
@@ -249,6 +261,12 @@ div.sidebar {
         color: rgb(128, 0, 255);
         font-family: quicksand;
         font-weight: 400;
+      }
+
+      .music_player_wrapper {
+        display: flex;
+        background: $purple;
+        padding: 20px 25px 20px 20px;
       }
 
       .artist_name_wrapper {
@@ -288,6 +306,17 @@ div.sidebar {
             display: flex;
             justify-content: center;
             align-items: center;
+            background-image: url(../images/play-triangle-wht.png);
+            background-repeat: no-repeat;
+            background-position: 18px center;
+            background-size: 11.44px 19.06px;
+            transition: all 0.2s linear;
+
+            &:hover {
+              background-image: url(../images/play-triangle-hover.png);
+              background-color: #fff;
+              cursor: pointer;
+            }
           }
 
           .progress_bar {
@@ -297,6 +326,7 @@ div.sidebar {
             p {
               margin: -20px 0px 0px;
               width: 100%;
+              color: #fff;
             }
           }
         }
@@ -308,9 +338,13 @@ div.sidebar {
             padding: 10px 30px;
             background: transparent;
             border: 3px solid #fff;
+            color: #fff;
+            transition: all 0.2s ease-in-out;
 
             &:hover {
-
+              background: #fff;
+              color: #8000ff;
+              font-weight: 700;
             }
           }
         }
@@ -323,7 +357,6 @@ div.sidebar {
   justify-content: space-between;
   .long_desc_wrapper {
     width: 550px;
-    padding-left: 15px;
     margin-right: 60px;
     p {
       font-size: 20px;

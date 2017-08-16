@@ -10,5 +10,105 @@ $font-family-sans:'Roboto', 'Helvetica Neue', sans-serif;
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
-@import "main.scss";
 // endbower
+
+@import "main.scss";
+.header {
+  background: #fff;
+}
+
+.main_content {
+  padding-top: 75px;
+  padding-right: 85px;
+  padding-left: 85px;
+
+  h1 {
+    float: right;
+    position: absolute;
+    z-index: 5;
+    right: 35px;
+    font-family: 'Quicksand';
+    color: $purple;
+    font-weight: 400;
+    font-size: 52px;
+  }
+
+  .top-row {
+    margin-top: 55px;
+  }
+
+  .artist_block {
+    overflow: hidden;
+    margin-bottom: 30px;
+    position: relative;
+
+    .artist_name {
+      padding: 15px 10px;
+      position: relative;
+
+      &:hover .date {
+        opacity: 1;
+      }
+
+      &.toupe {
+        background: $toupe;
+      }
+
+      &.mint {
+        background: $mint;
+      }
+
+      &.cream {
+        background: $cream;
+      }
+
+      .date {
+        background-color: $purple;
+        color: #fff;
+        text-align: center;
+        padding: 15px 0px;
+        position: absolute;
+        top: -58px;
+        left: 0;
+        width: 100%;
+        font-family: roboto;
+        font-weight: 300;
+        font-size: 20px;
+        opacity: 0;
+        transition: all 0.2s linear;
+      }
+
+      div {
+        font-size: 24px;
+        font-weight: Quicksand;
+        font-weight: 300;
+
+        img {
+          height: 32px;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .artist_thumb {
+      width: 100%;
+      padding-right: 20px;
+
+      &:hover {
+        // cursor: url('https://www.dev.singleserv.org/static/images/cursor.png'), pointer;
+      }
+    }
+  }
+}
+
+.cursor {
+ 	cursor: none;
+ 	width: 97px;
+ 	height: 137px;
+ 	background: url("../images/cursor.png") no-repeat left top;
+ 	position: absolute;
+ 	display: none;
+ 	top: 0;
+ 	left: 0;
+ 	z-index: 10000;
+}
